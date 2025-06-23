@@ -1,0 +1,21 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Python File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "python": "${command:python.interpreterPath}"
+            // conda 环境下调试时，确保已激活 conda playwright 环境
+            // "env": {
+            //     "PATH": "${env:PATH};/Users/bion/opt/miniconda3/envs/playwright/bin/"
+            //     // "PATH": "${env:PATH};/Users/xxx/miniconda3/envs/playwright/Scripts"
+            //     // /Users/bion/opt/miniconda3/envs/playwright/bin/python
+            // }
+        }
+    ]
+}
