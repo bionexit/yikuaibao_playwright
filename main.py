@@ -4,6 +4,7 @@ import time
 from urllib.parse import urljoin
 from playwright.sync_api import sync_playwright
 import html2text
+import merge
 
 # 获取当前时间 yyyy-mm-dd hh:mm:ss
 from datetime import datetime
@@ -24,6 +25,8 @@ h.ignore_images = False
 h.body_width = 0
 h.wrap_links = False
 
+
+    
 def sanitize_filename(level1_index,leve2_index, level1_title, level2_title):
     """生成文件名：第一级目录顺序号-第一级目录显示字符-第二级目录显示字符"""
     # 清理标题中的特殊字符
@@ -200,5 +203,7 @@ def crawl_docs():
         browser.close()
 
 if __name__ == "__main__":
-    crawl_docs()
+    # crawl_docs()
     print(f"爬取完成! 所有文档已保存到 {OUTPUT_DIR} 目录")
+    merge.merge_md_files(OUTPUT_DIR, f"{OUTPUT_DIR}/full-md.txt")
+    print("所有文档已合并到 full-md.txt")

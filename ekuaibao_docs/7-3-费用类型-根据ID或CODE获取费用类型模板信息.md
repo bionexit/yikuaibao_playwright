@@ -1,5 +1,5 @@
 [原始页面地址](https://docs.ekuaibao.com/docs/open-api/feetype/get-feetypes)
-数据获取时间 2025-06-23 13:00:17
+数据获取时间 2025-06-23 13:59:16
 
 # 根据ID或CODE获取费用类型模板信息
 
